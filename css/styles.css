@@ -1,7 +1,8 @@
 :root { 
     --nav-color: #304f45; /* we use the backgound of the head in 3 other html file so creating a varable is better to not loose / forget the color */  
     --hover-color: #faf3dd; 
-    --body-color : #f4f1e8; 
+    --body-color : #f4f1e8;
+    --text-color:#26352f;
 } 
 
 body{ 
@@ -209,12 +210,10 @@ body{
 .character {   
     display: grid; 
     grid-template-columns: minmax(0, 55%) minmax(0, 45%); 
-    gap: 0.2rem; 
-    padding: 0.5rem; 
-    background-color: #f4f1e8; 
-    color: #26352f; 
- 
-    min-height: 100vh; 
+    gap: 20px; 
+    padding: 15px; 
+    background-color: var(--body-color); 
+    color:var(--text-color); 
     min-width: 0;
     box-sizing: border-box;
 } 
@@ -241,10 +240,8 @@ body{
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
- 
-    gap: 0.4rem; 
- 
-    padding: 0.2rem; 
+    gap:10px; 
+    padding: 10px; 
     min-width: 0;
 } 
  
@@ -257,13 +254,13 @@ body{
 } 
  
 .character-role { 
-    font-size: 0.55rem; 
+    font-size: 10px; 
 } 
  
 /* Description */ 
  
 .character-description { 
-    font-size: 0.55rem; 
+    font-size: 10px; 
     line-height: 1.3; 
     overflow-wrap: break-word;
 } 
@@ -279,30 +276,93 @@ body{
 .stat { 
     display: flex; 
     flex-direction: column; 
- 
     padding: 0.3rem; 
- 
     border: 1px solid #c7c0aa; 
     border-radius: 8px; 
- 
     font-size: 0.55rem; 
     min-width: 0;
 } 
- 
+
+.linea-profile {
+    grid-column: 1 / -1;  /* Because .character has two columns the -1 let the width take the 2 column and take in this case the full width of the screen not half*/
+    width: 100%;
+    max-width: none;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: var(--body-color);
+    border: 2.5px dashed var(--nav-color);
+    color:var(--nav-color);
+    font-family: "Georgia",serif;
+}
+
+.linea-profile h2 {
+    margin: 0;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    margin: 8px 0 12px;
+    background-color: var(--text-color);
+}
+
+.stats p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin: 7px 0;
+    font-size: 10px;
+}
+
+.stats span {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.stats strong {
+    font-weight: normal;
+    letter-spacing: -1px;
+}
+
+.quest {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid var(--text-color);
+}
+
+.quest h3 {
+    margin: 0 0 5px;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.quest p {
+    margin: 0;
+    font-size: 10px;
+    line-height: 1.4;
+
+} 
 /* Button */ 
  
 .character-button { 
     padding: 0.4rem; 
- 
     border: none; 
     border-radius: 6px; 
- 
-    background-color: #304f45; 
+    background-color: var(--nav-color); 
     color: white; 
- 
-    font-size: 0.55rem; 
+    font-size: 11px; 
+    font-family: "Georgia",serif;
 } 
  
+
+
+
+
+
+
 
 
 /* ================= ABOUT ME PAGE ================= */
@@ -437,7 +497,7 @@ body{
     background-color: #ffffff;
 }
 
-#message {  
+#message {   /* since we want to write a message so it will logicaly be bigger than an email or a name so we add those to commad to make the message box bigger , better for the aesthetic */
     min-height: 120px;
     resize: vertical;
 }
@@ -551,4 +611,36 @@ body{
     .stat { 
         font-size: 0.9rem; 
     } 
+
+    .linea-profile {
+        padding: 20px;
+    }
+
+    .linea-profile h2 {
+        font-size: 1.5rem;
+        letter-spacing: 3px;
+    }
+
+    .line {
+        margin: 8px 0 15px;
+    }
+
+    .stats p {
+        margin: 8px 0;
+        font-size: 0.8rem;
+    }
+
+    .quest {
+        margin-top: 18px;
+        padding-top: 12px;
+    }
+
+    .quest h3 {
+        margin-bottom: 6px;
+        font-size: 0.85rem;
+    }
+
+    .quest p {
+        font-size: 0.8rem;
+    }
 }
