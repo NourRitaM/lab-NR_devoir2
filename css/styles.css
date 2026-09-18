@@ -145,8 +145,27 @@ body{
     max-width: 300px;  /* so that the map stay the same size no matter what */ 
     height: auto; 
     display: block; 
+    margin:0 0 20px; /* margin left 0, right 0 , top and bottom 20px */
 } 
 
+#game{
+    display: flex;
+    grid-area: game-info;
+    min-width: 0;
+}
+
+
+.game-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;  /* because the background of the web page won't be the full size so we ajust this so that it take the whole space no matter what type of device we use */
+    /* 0i created 2 box with the same backgound and type so it merge together and we can't telle them apart but if i put the border around them it will show the 2 box seperately */
+    box-sizing: border-box;
+   
+    background-color: var(--hover-color);
+}
 
 .foot {
     background-color: var(--nav-color);
@@ -165,6 +184,7 @@ body{
     grid-template-areas: 
         "header header" 
         "sidebar main"
+        "game-info game-info"
         "foot foot"; 
     gap: 5px; 
     padding: 5px; 
@@ -406,9 +426,7 @@ body{
     color: var(--nav-color);
 }
 
-#name,
-#email,
-#message {
+#name,#email,#message {
     width: 100%;
     max-width: 500px;
     box-sizing: border-box;
@@ -419,7 +437,7 @@ body{
     background-color: #ffffff;
 }
 
-#message {
+#message {  
     min-height: 120px;
     resize: vertical;
 }
@@ -498,7 +516,9 @@ body{
         grid-template-columns: 250px minmax(0, 1fr);   /* the minmax is to allow the 2 colums created to always shrink */
         grid-template-areas: 
             "header header" 
-            "sidebar main"; 
+            "sidebar main"
+            "game-info game-info"
+            "foot foot"; 
     } 
 
     
