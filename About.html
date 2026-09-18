@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <!--  we put this meta so that the web page we create can fit on anydevice with a zoom scale of 100% -->
+
+        <title>About Me</title> 
+
+        <link rel="stylesheet" href="css/styles.css">
+
+        <link rel="icon" type="image/png" href="images/logo.png">
+        <!-- putting the rel with the link too add the logo that i want in the navigtor bar to like that have a logo--> 
+        
+    </head>
+
+<body>   
+
+    <div class="grid">
+
+        <!-- creating the header of my html file for the about me page-->
+        <header class="header"> 
+
+            <div class="navbar"> 
+
+                <p>
+                    welcome to echoes of 
+                    <span>Akatsu</span>
+                </p>
+                <!-- putting here span so that i can change the font and style of akatsu while staying inline-->
+
+                <div class="nav-links"> 
+
+                    <nav> 
+
+                        <a href="index2.html">Home</a> 
+
+                        <a href="character.html">Character</a>
+
+                    </nav>
+
+                </div> 
+
+            </div>
+
+        </header>
+
+
+        <!-- now creating the side bar  -->
+        <aside id="sidebar">
+
+            <div class="sidebar-title">
+
+                <h2>THE ECHOES</h2>
+
+                <p>Every forgotten voice leaves a trace.</p>
+
+            </div>
+
+            <h3>ABOUT THE CREATOR</h3>
+
+            <p>
+                Discover the person behind
+                <strong>Echoes of Akatsu</strong>.
+            </p>
+
+            <p class="sidebar-quote">
+                “Every idea begins with a single line of code.”
+            </p>
+              <p>
+                        I am a Software Engineering student at the University 
+                        of Saint Joseph (USJ), with a strong interest in software 
+                        development and emerging technologies. 
+                        
+                        I am passionate about building practical and innovative 
+                        solutions while continuously strengthening my technical 
+                        and problem-solving skills.
+                        
+                        My interests include software engineering, artificial 
+                        intelligence, data structures and algorithms, and game 
+                        development. 
+                        
+                        I am always eager to take on new challenges, learn new 
+                        technologies, and grow as a future software engineer.
+                    </p>
+
+        </aside>
+
+
+        <!-- ================= MAIN ================= -->
+        <main id="main_info">
+
+            <div class="main">
+
+                <!-- SECTION 1 -->
+                <section id="hero">
+
+                    <h1>Turning Ideas Into Code</h1> 
+
+                    <p>
+                        Exploring technology, creating projects, 
+                        and learning something new every day.
+                    </p>
+
+                </section>
+
+
+                <!-- SECTION 2 -->
+                <section id="about_Me">
+
+                    <h2>About Me</h2>
+                    <!-- we put h1 for the big titles and h2 for the little one , not the main one -->
+
+                    <p>My name is:</p>
+
+                    <p class="p1">Nour Rita Mokbel.</p>
+
+
+                    <div>
+                        <!-- we use a div to create a container for the image so we can style it with CSS -->              
+
+                        <img 
+                            src="images/a5135946da63c1d3c54a70990f81850e_0.jpg" 
+                            alt="an image of me :Nour Rita Mokbel" 
+                            id="my-photo"
+                        >
+                        <!-- we use an id so we can style it with CSS -->
+
+                    </div>
+
+
+                  
+
+                </section>
+
+
+                <!-- SECTION 3 -->
+                <section class="about-boxes">
+
+                    <div class="box">
+                        <!-- if we put class container in the h2 and the class box in the p it won't work we have to put div so that the display that will appear is lke what we want -->
+
+                        <h2>A little More:</h2>
+
+                        <p>
+                            Outside of software engineering, I enjoy game 
+                            development, exploring new technologies, reading, 
+                            and continuously learning new things.
+                        </p>
+
+                    </div>
+
+
+                    <div class="box">
+
+                        <h2>My Skills:</h2>
+
+                        <p>I have experience in:</p>
+
+                        <!-- ul is short for unordered list, which creates a list with bullet points; li is used to create each element we want to display in the list, so each li is an item in the list -->
+
+                        <ul>
+
+                            <li>C++</li>
+
+                            <li>Python</li>
+
+                            <li>HTML/CSS</li>
+
+                            <li>Arduino</li>
+
+                            <li>Git</li>
+
+                        </ul>
+
+                    </div>
+
+                </section>
+
+
+                <!-- SECTION 4 -->
+                <section class="contact">
+
+                    <div class="Form">
+
+                        <h2>Contact Form:</h2>
+
+                        <!-- 1- action="..." → indicates where to send the form data. -->
+                        <!-- 2- # → represents the current page, without navigating to another URL.--> 
+                        <!-- 3- method="post" → indicates how to send the data. -->
+
+                        <form action="#" method="post">
+
+                            <label for="name">Name:</label>
+
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                required
+                            >
+                            <!-- we use id for CSS and JavaScript, and name for PHP and the server to retrieve the information entered by the user -->
+
+                            <br>
+                            <!-- we use br to go to the next line -->
+
+                            <label for="email">Email:</label>
+
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email"  
+                                required
+                            >
+
+                            <br>
+
+                            <label for="message">Message:</label>
+
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                required
+                            ></textarea>
+                            <!-- when do we use input or textarea? we use input for small text fields and textarea for larger input fields like a message -->
+
+                            <br>
+
+                            <button type="submit" id="submit">
+                                Submit
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ================= SOCIAL LINKS ================= -->
+
+                <!-- we create links containing the information we want to include -->
+
+                <div class="mylinks">
+
+                    <div class="social-link">
+
+                        <a 
+                            href="https://github.com/NourRitaM/lab-NR" 
+                            target="_blank"
+                        >
+                            <!-- we do this so the selected image is not only the GitHub or LinkedIn logo, but also a link that redirects to the site -->
+
+                            <img 
+                                src="images/0910dd2adeb4e5debfad67cf24d8e818.png" 
+                                alt="My Github Profile" 
+                                id="logo_2"
+                            >
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="social-link">
+
+                        <a 
+                            href="https://www.linkedin.com/in/nour-rita-mokbel-b422b7349/" 
+                            target="_blank"
+                        >
+
+                            <img 
+                                src="images/eec7163a65d44b91fff464b66e1d2fce.png" 
+                                alt="My LinkedIn Profile" 
+                                id="logo_3"
+                            >
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="foot">
+
+            <p>
+                ©2026 About Me /// Contact: nourrita.mokbel@net.usj.edu.lb
+            </p>
+
+        </footer>    
+
+    </div>
+
+</body> 
+
+</html>
+
