@@ -1,10 +1,3 @@
-Je vais lire le `README.md` actuel et vérifier rapidement les fichiers du projet pour te proposer un contenu adapté à ton devoir, sans répéter ce qui est déjà écrit.
-
-Read 
-
-Dans ton `README.md`, tu peux mettre une présentation du projet, les pages, les technologies et comment l’ouvrir :
-
-```markdown
 # The Echoes of Akatsu
 
 The Echoes of Akatsu is a responsive fantasy adventure game website created as part of a web development assignment.
@@ -44,4 +37,3 @@ Open `index2.html` in a web browser.
 ## Author
 
 Nour Rita Mokbel
-```
