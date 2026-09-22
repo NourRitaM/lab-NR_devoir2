@@ -28,14 +28,14 @@
 body {   
     /* == spacing scale: the spacing variables are inherited by the whole page == */
  
-
+    font-family: "Georgia",serif;
     background-color: var(--body-color); /* so that the whole background stay the same color , wo don't have change in the color background */   
     margin: 0;  
     width: 100%;  
     min-height: 100vh;  /* if we didn't put this the footer wouldn't really been at the bottom of the age*/
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;    /* because in the assingnement it's probidden to do horizontale scrollin  so to be more careful of this point */  
+    overflow-x: hidden;    /*for more safety because in the assingnement it's probidden to do horizontale scrollin  so to be more careful of this point */  
 }   
    
 
@@ -62,13 +62,13 @@ body {
     margin: 0; 
     min-width: 0; 
     overflow-wrap: break-word; 
-    font-size: 0.625rem; 
+    font-size: 0.75rem; 
 } 
  
 .navbar span {   
     font-family: "Georgia", serif;   
     font-weight: 800; /* to make the word Akatsu bold */   
-    font-size: 0.6875rem;  
+    font-size: 0.8125rem;  
 }   
    
 .nav-links { 
@@ -86,7 +86,7 @@ body {
  /* add this part so if i put the curser on the link it change the color and if i've already visited the link it doesn't change to a default color */  
 .navbar a,.navbar a:visited {   
     color: var(--hover-color);   
-    font-size: 0.5625rem;  
+    font-size: 0.875rem;  
     transition: color 180ms ease;   /* to make the transition before clicking on the link/ when the curser is on the link smoother */
     overflow-wrap: break-word;  
 }  
@@ -112,7 +112,7 @@ body {
   
 #sidebar > p {  
     font-family: "Georgia", serif;  
-    font-size: 0.625rem;  
+    font-size: 0.875rem;  
     line-height: 1.4;  
     text-align: center;  
     margin: 0 0 var(--space-8);  
@@ -140,7 +140,7 @@ body {
   
 .sidebar-title p {  
     margin: 0;  
-    font-size: 0.5625rem;  
+    font-size: 0.75rem;  
     font-style: italic;  
     line-height: 1.4;  
     text-decoration-line: underline;  
@@ -165,6 +165,14 @@ body {
     margin-top: var(--space-3);  
     overflow-wrap: break-word;  
 }  
+
+.sidebar-guide p {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    text-align: center;
+    overflow-wrap: break-word;
+}
   
 /* creating the  main design of the webpage of index2 */   
   
@@ -192,7 +200,7 @@ body {
   
 .main p {  
     line-height: 1.5;  
-    font-size: 0.625rem;  
+    font-size: 1rem;  
     margin: 0 0 var(--space-7);   /* left 0, right 0 and top,bottom the size desire */
     overflow-wrap: break-word;  
 }  
@@ -202,17 +210,51 @@ body {
     max-width: 300px;  /* so that the map stay the same size no matter what */   
     height: auto;   
     display: block;   
-    margin: 0 0 var(--space-7);  
+    margin: 0 auto var(--space-7); 
 }   
   
 #game {  
     display: flex;  
     flex-direction: row;  
     grid-area: game-info;  
+    align-self: start;
+    margin-top: var(--space-3);
     min-width: 0;  
     width: 100%;  
     justify-content: space-between; 
 }  
+
+#game-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+    grid-area: game-details;
+    min-width: 0;
+    width: 100%;
+    padding: var(--space-6);
+    box-sizing: border-box;
+}
+
+.game-detail-box {
+    min-width: 0;
+    padding: var(--space-6);
+    background-color: var(--body-color);
+    border: 2px solid var(--border-color);
+    box-sizing: border-box;
+}
+
+.game-detail-box h2 {
+    margin: 0 0 var(--space-4);
+    font-size: 1rem;
+    overflow-wrap: break-word;
+}
+
+.game-detail-box p {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+}
   
 .game-info {  
     display: flex;  
@@ -231,7 +273,7 @@ body {
 .game-info p {  
     margin: 0;  
     line-height: 1.4;  
-    font-size: 0.5625rem; 
+    font-size: 0.875rem; 
     overflow-wrap: break-word;  
 }  
   
@@ -241,8 +283,38 @@ body {
     line-height: 1.4;  
     width: 100%;  
     box-sizing: border-box; 
-    font-size: 0.5625rem; 
+    font-size: 0.875rem; 
 }  
+
+#game-note {
+    grid-area: game-note;
+    align-self: start;
+    min-width: 0;
+    width: 100%;
+    padding: var(--space-6);
+    box-sizing: border-box;
+}
+
+.game-note-box {
+    width: 100%;
+    padding: var(--space-6);
+    background-color: var(--hover-color);
+    border: 2px dashed var(--nav-color);
+    box-sizing: border-box;
+}
+
+.game-note-box h2 {
+    margin: 0 0 var(--space-4);
+    font-size: 1rem;
+    overflow-wrap: break-word;
+}
+
+.game-note-box p {
+    margin: 0;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+}
   
 .foot {  
     background-color: var(--nav-color);  
@@ -253,7 +325,7 @@ body {
     margin: 0;  
     padding: var(--space-5);  
     color: var(--hover-color);  
-    font-size: 0.5625rem;  
+    font-size: 0.875rem;  
     text-align: center;  
     overflow-wrap: break-word;  
 }  
@@ -262,11 +334,14 @@ body {
 .grid {
     display: grid;
     grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto 1fr auto;
     grid-template-areas:
         "header"
         "sidebar"
         "main"
+        "game-details"
         "game-info"
+        "game-note"
         "foot";
     gap: var(--space-1);
     padding: var(--space-1);
@@ -275,6 +350,19 @@ body {
     min-width: 0;
     box-sizing: border-box;
 } 
+
+body > .grid {
+    min-height: 100vh;
+}
+
+.about-page .grid {
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "sidebar"
+        "main"
+        "foot";
+}
    
 .character {
     display: grid;
@@ -291,6 +379,7 @@ body {
     min-width: 0;
     width: 100%;
     box-sizing: border-box;
+    flex: 1;
 } 
    
 
@@ -362,7 +451,7 @@ body {
 /* Description  of the character how do in want the description to look like*/   
    
 .character-description {   
-    font-size: 0.5625rem;   
+    font-size: 0.875rem;   
     line-height: 1.3;   
     overflow-wrap: break-word;  
 }   
@@ -388,7 +477,7 @@ body {
     padding: var(--space-2);   
     border: 1px solid var(--border-color);   
     border-radius: 6px;   
-    font-size: 8px;   
+    font-size: 0.5rem;   
     min-width: 0;  
     width: 100%;  
     box-sizing: border-box; 
@@ -428,20 +517,22 @@ body {
     align-items: center;  
     gap: var(--space-2);  
     margin: var(--space-2) 0;  
-    font-size: 7px;  
+    font-size: 0.5625rem;  
     min-width: 0;  
 }  
   
 .stats span {    /* span is used for inline styling*/
     font-weight: bold;  
-    letter-spacing: 0.5px;  
+    letter-spacing: 0.5px; 
+    min-width: 0; 
 }  
   
 .stats strong {    
     font-weight: normal;  
     letter-spacing: -1px;  
-    font-size: 7px; 
+    font-size: 0.4375rem; 
     white-space: nowrap;  
+    min-width: 0;
 }  
   
 .quest {  
@@ -458,7 +549,7 @@ body {
   
 .quest p {  
     margin: 0;  
-    font-size: 8px;  
+    font-size: 0.8125rem;  
     line-height: 1.4;  
     overflow-wrap: break-word;  
 }   
@@ -470,7 +561,7 @@ body {
     align-self: center;
     padding: var(--space-4) var(--space-8);   
     border: none;   
-    border-radius: 5px;   
+    border-radius: 0.3125rem;   
     background-color: var(--nav-color);   
     color: var(--white-color);   
     font-size: 0.625rem;   
@@ -493,7 +584,7 @@ body {
 #hero h1 {  
     color: var(--nav-color);  
     font-family: "Georgia", serif;  
-    font-size: 20px;  
+    font-size: 1.25rem;  
     margin: 0 0 var(--space-4);  
     overflow-wrap: break-word;  
 }  
@@ -570,7 +661,7 @@ body {
   
 .box p {  
     line-height: 1.5;  
-    font-size: 0.625rem; 
+    font-size: 1rem; 
     overflow-wrap: break-word;  
 }  
   
@@ -578,10 +669,9 @@ body {
     width: 100%;  
     max-width: 100%;  
     margin: var(--space-3) auto;  
-    padding-left: 20px;  
-    text-align: left;  
-    line-height: 1.5;  
-    font-size: 0.625rem; 
+    padding: 1.25rem;  
+    text-align: center;  /* to put the element in the box in the center !!! doesn't align the box but the element inside the box */    line-height: 1.5;  
+    font-size: 1rem; 
     box-sizing: border-box; 
 }  
   
@@ -707,16 +797,28 @@ body {
   
     .grid {   
         grid-template-columns: 250px calc(100% - 255px);     
+        grid-template-rows: auto 1fr auto auto 1fr auto;
         grid-template-areas:   
             "header header"   
             "sidebar main"  
-            "game-info game-info"  
+            "sidebar game-details"
+            "sidebar game-info"  
+            "sidebar game-note"
             "foot foot";   
     }   
+
+    .about-page .grid {
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "header header"
+            "sidebar main"
+            "foot foot";
+    }
   
     #sidebar {   
-        gap: var(--space-6);   
+        gap: var(--space-8);  
         padding: var(--space-7);   
+        justify-content: flex-start;
     } 
  
     #sidebar > p {  
@@ -734,12 +836,16 @@ body {
   
     .sidebar-title h2 {  
         margin: 0 0 var(--space-6);  
-        font-size: 20px;  
+        font-size: 1.25rem;  
     }  
   
     .sidebar-title p {  
         font-size: 0.875rem;  
     }  
+
+    .sidebar-guide p {
+        font-size: 1rem;
+    }
   
     #sidebar h3 {  
         margin: 0 0 var(--space-8);  
@@ -752,7 +858,7 @@ body {
   
     .main h1 {  
         margin-bottom: var(--space-8);  
-        font-size: 24px;  
+        font-size: 1.5rem;  
     }  
   
     .main p {  
@@ -764,12 +870,46 @@ body {
     #map-fantasy {   
         width: 100%;   
         max-width: 300px;   
-        margin: 0 0 var(--space-11);  
+        margin: 0 auto var(--space-11);  
     }  
  
     #game {  
         flex-direction: row;  
     }  
+
+    #game-details {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-9);
+        padding: var(--space-7);
+    }
+
+    .game-detail-box {
+        padding: var(--space-7);
+    }
+
+    .game-detail-box h2 {
+        font-size: 1.25rem;
+    }
+
+    .game-detail-box p {
+        font-size: 1rem;
+    }
+
+    #game-note {
+        padding: var(--space-7);
+    }
+
+    .game-note-box {
+        padding: var(--space-7);
+    }
+
+    .game-note-box h2 {
+        font-size: 1.25rem;
+    }
+
+    .game-note-box p {
+        font-size: 1rem;
+    }
   
     .game-info {  
         flex-direction: row;  
@@ -821,7 +961,7 @@ body {
     }  
    
     .character-name {   
-        font-size: 48px;  
+        font-size: 3rem;  
     }   
    
     .character-role {   
@@ -852,7 +992,7 @@ body {
     }  
   
     .linea-profile h2 {  
-        font-size: 24px;  
+        font-size: 1.5rem;  
         letter-spacing: 3px;  
     }  
   
@@ -901,7 +1041,7 @@ body {
     #about_Me h2,  
     .about-boxes h2,  
     .contact h2 {  
-        font-size: 28px;  
+        font-size: 1.75rem;  
     }  
  
     #my-photo { 
