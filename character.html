@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
         <link rel="stylesheet" href="css/styles.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>THE ECHOES OF AKATSU</title>
@@ -11,10 +12,12 @@
         
         <header class="header">
             <div class="navbar"> 
-                <p> welcome to echoes of <span> Akatsu</span></p> <!-- putting here span so that i can change the font and style of akatsu while staying inline-->
+                <p>welcome to echoes of <span>Akatsu</span></p>
+                <!-- putting here span so that i can change the font and style of akatsu while staying inline-->
+                
                 <div class="nav-links"> 
                     <nav> 
-                        <a href="index2.html">home </a> 
+                        <a href="index2.html">home</a> 
                         <a href="About.html">About_creator</a> 
                     </nav>
                 </div> 
@@ -22,87 +25,270 @@
         </header>
        
         <section class="character">
+            <div class="character-main-content">
+                <img src="images/character.png" alt="Fantasy herbalist character" id="character-image">
+                <div class="character-info">
+                    <h2 class="character-name">Linae</h2>
+                    <p class="character-role">
+                        Herbalist · Alchemist · Wanderer
+                    </p>
+                    <p class="character-description">
+                        A curious herbalist who travels across the kingdom
+                        searching for rare plants and forgotten remedies.
+                    </p>
+                    <div class="character-stats">
+                        <h2>Linea STATS</h2>
+                        <div class="stat">
+                            <b>Element</b>
+                            <span>Nature</span>
+                        </div>
+                        <div class="stat">
+                            <b>Weapon</b>
+                            <span>Catalyst</span>
+                        </div>
 
-            <img src="images/character.png"alt="Fantasy herbalist character" id="character-image" >
-            <div class="character-info">
+                        <div class="stat">
+                            <b>Role</b>
+                            <span>Support</span>
+                        </div>
 
-                <h2 class="character-name">Linae</h2>
-
-                <p class="character-role">
-                    Herbalist · Alchemist · Wanderer
-                </p>
-
-                <p class="character-description">
-                    A curious herbalist who travels across the kingdom
-                    searching for rare plants and forgotten remedies.
-                </p>
-
-                <div class="character-stats">
-                    <h2>Linea STATS</h2>
-                    <div class="stat">
-                        <b>Element</b>
-                        <span>Nature</span>
                     </div>
 
-                    <div class="stat">
-                        <b>Weapon</b>  <!-- b is to put a word in bold-->
-                        <span>Catalyst</span> <!-- is to put special design to a set of caracter while staying inline-->
-                    </div>
+                    <br>
+                    <!-- to create a force space between the button and the stats-->
 
-                    <div class="stat">
-                        <b>Role</b>
-                        <span>Support</span>
-                    </div>
+                    <a class="character-button" href="#linea-stats">
+                        Discover Character
+                    </a>
 
                 </div>
-                <br>  <!-- to create a force space between the button and the  stats-->
-                 
-                
-                <button class="character-button">
-                    Discover Character
-                </button>
+
+                <img src="images/linea_stats.png"
+                     alt="Linea character reference sheet"
+                     id="linea-stats-image">
+
+                <section class="linea-profile" id="linea-stats">
+
+                    <h2>LINEA</h2>
+                    <div class="line"></div>
+
+                    <div class="stats">
+
+                        <p>
+                            <span>LEVEL</span> 01
+                        </p>
+
+                        <p>
+                            <span>CLASS</span> EXPLORER
+                        </p>
+
+                        <p>
+                            <span>SKILL</span> HERBALISM
+                        </p>
+
+                        <p>
+                            <span>AGILITY</span>
+                            <strong>███████░░░</strong>
+                        </p>
+
+                        <p>
+                            <span>COURAGE</span>
+                            <strong>████████░░</strong>
+                        </p>
+                        <p>
+                            <span>KNOWLEDGE</span>
+                            <!-- 9/10 knowledge level -->
+                            <!-- <strong> contains the visual stat bar -->
+                            <strong>█████████░</strong>
+                            <!--
+                            The characters █ and ░ are simply Unicode characters:
+
+                            █ = filled → points/level you have
+                            ░ = empty → points/level remaining
+                            -->
+                        </p>
+                    </div>
+
+                    <div class="quest">
+
+                        <h3>QUEST</h3>
+
+                        <p>
+                            Discover the secrets of Akatsu.
+                        </p>
+
+                    </div>
+
+                    <div class="secondary-stats">
+
+                        <h3>COMBAT STATS</h3>
+                        <div class="stats">
+                            <p>
+                                <span>HEALTH</span>
+                                <strong>██████░░░░</strong>
+                            </p>
+                            <p>
+                                <span>DEFENSE</span>
+                                <strong>█████░░░░░</strong>
+                            </p>
+                            <p>
+                                <span>HEALING</span>
+                                <strong>████████░░</strong>
+                            </p>
+                        </div>
+                    </div>
+
+                </section>
+
             </div>
-            <img src="images/linea_stats.png" alt="Linea character reference sheet" id="linea-stats-image">
-            <section class="linea-profile">
-                <h2>LINEA</h2>
-                <div class="line"></div>
 
-                <div class="stats">
-                    <p><span>LEVEL</span> 01</p>
-                    <p><span>CLASS</span> EXPLORER</p>
-                    <p><span>SKILL</span> HERBALISM</p>
 
+            <section class="character-side-panel">
+
+                <div class="side-card">
+
+                    <h3>Heritage</h3>
                     <p>
-                        <span>AGILITY</span>
-                        <strong>███████░░░</strong>
+                        Guardian of forgotten herbs and lost remedies.
                     </p>
 
+                    <ul>
+                        <li>Nature magic</li>
+                        <li>Alchemy</li>
+                        <li>Ancient wisdom</li>
+                    </ul>
+
+                </div>
+                <div class="side-card">
+
+                    <h3>Origin</h3>
                     <p>
-                        <span>COURAGE</span>
-                        <strong>████████░░</strong>
+                        Raised in the quiet village of Sereh, where old rituals still linger.
+                    </p>
+                    <ul>
+                        <li>Village-born</li>
+                        <li>Forest guide</li>
+                        <li>Quiet strength</li>
+                    </ul>
+
+                </div>
+                <div class="side-card">
+                    <h3>Persona</h3>
+                    <p>
+                        Kind, observant, and brave when those around her need guidance.
                     </p>
 
+                    <ul>
+                        <li>Patient</li>
+                        <li>Curious</li>
+                        <li>Resilient</li>
+                    </ul>
+                </div>
+                <div class="side-card">
+                    <h3>Goal</h3>
                     <p>
-                        <span>KNOWLEDGE</span>
-                        <!-- 9/10 knowledge level -->
-                         <!-- <strong> contains the visual stat bar -->
-                        <strong>█████████░</strong>  <!--The characters █ and ░ are simply Unicode characters:
-
-                        █ = filled → points/level you have
-                        ░ = empty → points/level remaining -->
+                        Search for her missing sister and uncover the truth behind Akatsu's echoes.
                     </p>
+                    <ul>
+                        <li>Quest-driven</li>
+                        <li>Determined</li>
+                        <li>Hopeful</li>
+                    </ul>
+
                 </div>
 
-                <div class="quest">
-                    <h3>QUEST</h3>
-                    <p>Discover the secrets of Akatsu.</p>
+
+                <div class="side-card">
+
+                    <h3>Companion</h3>
+
+                    <p>
+                        Her journey is guided by memory, intuition, and the whispers of the land.
+                    </p>
+
+                    <ul>
+                        <li>Ancient clues</li>
+                        <li>Lost paths</li>
+                        <li>Hidden truths</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="side-card">
+
+                    <h3>Traits</h3>
+
+                    <p>
+                        Crafted for healing, exploration, and protecting those she loves.
+                    </p>
+                    <ul>
+                        <li>Supportive</li>
+                        <li>Resourceful</li>
+                        <li>Brave</li>
+                    </ul>
+                </div>
+                <div class="side-card">
+                    <h3>Legacy</h3>
+                    <p>
+                        Her wisdom is said to be inherited from the keepers of ancient forests.
+                    </p>
+
+                    <ul>
+                        <li>Ancient tales</li>
+                        <li>Hidden lore</li>
+                        <li>Forest bond</li>
+                    </ul>
+                </div>
+                <div class="side-card">
+                    <h3>Temper</h3>
+                    <p>
+                        Calm under pressure, but fiercely protective when her loved ones are threatened.
+                    </p>
+                    <ul>
+                        <li>Steady</li>
+                        <li>Protective</li>
+                        <li>Bold</li>
+                    </ul>
+
+                </div>
+
+
+                <div class="side-card">
+
+                    <h3>Journey</h3>
+
+                    <p>
+                        Every step takes her closer to the truth hidden beneath Akatsu’s ruins.
+                    </p>
+                    <ul>
+                        <li>Echoes</li>
+                        <li>Ruins</li>
+                        <li>Discovery</li>
+                    </ul>
+
+                </div>
+                <div class="side-card">
+
+                    <h3>Bond</h3>
+
+                    <p>
+                        Her strongest power is the unbreakable bond she shares with those she protects.
+                    </p>
+
+                    <ul>
+                        <li>Trust</li>
+                        <li>Care</li>
+                        <li>Unity</li>
+                    </ul>
+
                 </div>
             </section>
         </section>
-       <footer class="foot">
-            <p>©2026 About Me /// Contact: nourrita.mokbel@net.usj.edu.lb</p>
-        </footer> 
-
-    </body>
-        
+        <footer class="foot">
+            <p>
+                ©2026 About Me /// Contact: nourrita.mokbel@net.usj.edu.lb
+            </p>
+         </footer> 
+    </body>  
 </html>

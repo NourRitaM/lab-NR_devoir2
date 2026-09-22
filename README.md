@@ -6,6 +6,15 @@ The Echoes of Akatsu is a responsive fantasy adventure game website created as p
 
 The website presents the world of Akatsu, a mysterious fantasy kingdom filled with forgotten magic, ancient relics, and hidden secrets. The player follows Linea, a young apothecary searching for her missing sister.
 
+## Project Notes
+
+This project was built as a multi-page web experience with a consistent visual identity and responsive layout. The design mixes a fantasy aesthetic with a clean editorial style, using structured sections, a sidebar, and a carefully styled navigation system.
+
+The code is organized to keep each page focused on one main purpose:
+- the home page introduces the world and story,
+- the character page presents the main hero,
+- the about page gives personal information and a contact form.
+
 ## Pages
 
 - `index2.html` - Homepage and game presentation
@@ -32,7 +41,17 @@ The website presents the world of Akatsu, a mysterious fantasy kingdom filled wi
 
 ## How to Open the Project
 
-Open `index2.html` in a web browser.
+1. Open the project folder in your browser.
+2. Launch the homepage file named index2.html.
+3. The page is designed to work directly in a browser without requiring any installation.
+
+## Project Structure
+
+- index2.html - landing page for the game world and story
+- character.html - character profile page for Linea
+- About.html - about-me section with contact form and social links
+- css/styles.css - shared styling for the full project
+- images/ - all images and screenshots used across the website
 
 ## Screenshots
 
