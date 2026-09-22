@@ -1,705 +1,938 @@
-:root { 
-    --nav-color: #304f45; /* we use the backgound of the head in 3 other html file so creating a varable is better to not loose / forget the color */  
-    --hover-color: #faf3dd; 
-    --body-color : #f4f1e8;
-    --text-color:#26352f;
-    --link-hover-color: #e1c084;
-} 
+:root {   
+    --nav-color: #304f45; /* we use the backgound of the head in 3 other html file so creating a varable is better to not loose / forget the color */    
+    --hover-color: #faf3dd;   
+    --body-color: #f4f1e8;  
+    --text-color: #26352f;  
+    --link-hover-color: #e1c084;  
+    --sidebar-color: #79a593;
+    --quote-color: rgb(5, 68, 39);
+    --border-color: #c7c0aa;
+    --white-color: #ffffff;
+    --space-1: 3px;
+    --space-2: 4px;
+    --space-3: 5px;
+    --space-4: 6px;
+    --space-5: 7px;
+    --space-6: 8px;
+    --space-7: 10px;
+    --space-8: 12px;
+    --space-9: 15px;
+    --space-10: 18px;
+    --space-11: 20px;
+    --space-12: 25px;
+    --space-13: 30px;
+    --space-14: 40px;
+    --space-15: 45px;
+}   
 
-body{ 
-    background-color:var(--body-color); /* so that the whole background stay the same color , wo don't have change in the color background */ 
-    margin: 0;
-    width: 100%;
-    overflow-x: hidden;    /* because in the assingnement it's probidden to do horizontale scrollin  so to be more careful of this point */
-} 
+body {   
+    /* == spacing scale: the spacing variables are inherited by the whole page == */
  
-/* creating the nav bar of the  webpage */ 
-.header { 
-    grid-area: header; 
-    background-color: var(--nav-color); 
-    color:#f4f1e8; 
-    padding: 10px; 
-    justify-content: space-between; 
-    min-width: 0;  /* It prevents long text or images to be wider than the the grid created in the screen */
-} 
- 
-.navbar{ 
-    display: flex; 
-    flex-direction: row; 
-    gap: 5px; 
-    justify-content: space-between; /* to create a good nav bar with each item on either the lef or the right */ 
-    min-width: 0;
-} 
- 
-.navbar span{ 
-    font-family:"Georgia",serif; 
-    font-weight: 800; /* to make the word Akatsu bold */ 
-    font-size: 0.8rem;
-} 
- 
-.nav-links nav { 
-    display: flex; 
-    flex-direction: row; 
-    gap: 8px;  /* to put a space between character and about the creator */ 
-    justify-content: space-between; 
-    flex-wrap: wrap;
-} 
- 
-.navbar a,
-.navbar a:visited { 
-    color: var(--hover-color); 
-    font-size: 0.75rem;
-    transition: color 180ms ease 180ms;
-}
 
-.navbar .nav-links a:hover {
-    color: var(--link-hover-color);
-} 
- 
- 
-/* creating the sidebar with the map and intro to the game */ 
- 
-#sidebar{ 
-    display: flex; 
-    flex-direction: column; 
-    gap: 8px; 
-    padding: 10px; 
-    grid-area: sidebar; 
-    background-color: #79a593; 
-    min-width: 0;
-    box-sizing: border-box;
-} 
-
-#sidebar > p {
-    font-family: "Garamond", serif;
-    font-size: 16px;
-    line-height: 1.4;
-    text-align: center;
-    margin: 0 0 25px;
-}
-
-#sidebar h2  { 
-    font-family: "Georgia", serif; 
-    font-size: 0.75rem; 
-    line-height: 1.2; 
-    overflow-wrap: break-word;
-    text-align: center;
-    margin: 0;
-} 
- 
-.sidebar-title {   
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.sidebar-title h2 {
-    margin: 0 0 8px;
-    font-size: 20px;
-}
-
-.sidebar-title p {
-    margin: 0;
-    font-size: 14px;
-    font-style: italic;
-    line-height: 1.5;
-    text-decoration-line: underline;
-}
-
-#sidebar h3 {
-    margin: 0 0 12px;
-    font-size: 18px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    text-align: center;
-}
-
-.sidebar-quote {
-    color: rgb(5, 68, 39);
-    font-style: italic;
-    text-align: center;
-    line-height: 1.6;
-    text-decoration-line: underline;
-    margin-top: 10px;
-}
-
-/* creating the  main design of the webpage */ 
-#main_info {
-    grid-area: main;
-    min-width: 0;
-    box-sizing: border-box;
-}
-
-.main {
-    background: var(--body-color);
-    padding: 10px;
-    min-width: 0;
-    box-sizing: border-box;
-}
-
-.main h1 {
-    margin-top: 0;
-    margin-bottom: 12px;
-    font-size: clamp(1.5rem, 2vw, 2.5rem);
-}
-
-.main p {
-    line-height: 1.7;
-    font-size: 1rem;
-    margin: 0 0 20px;
-}
-
-#map-fantasy { 
-    width: 100%; 
-    max-width: 300px;  /* so that the map stay the same size no matter what */ 
-    height: auto; 
-    display: block; 
-    margin:0 0 20px; /* margin left 0, right 0 , top and bottom 20px */
-} 
-
-#game{
+    background-color: var(--body-color); /* so that the whole background stay the same color , wo don't have change in the color background */   
+    margin: 0;  
+    width: 100%;  
+    min-height: 100vh;  /* if we didn't put this the footer wouldn't really been at the bottom of the age*/
     display: flex;
-    grid-area: game-info;
-    min-width: 0;
-}
-
-
-.game-info{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    width: 100%;  /* because the background of the web page won't be the full size so we ajust this so that it take the whole space no matter what type of device we use */
-    /* 0i created 2 box with the same backgound and type so it merge together and we can't telle them apart but if i put the border around them it will show the 2 box seperately */
-    box-sizing: border-box;
+    flex-direction: column;
+    overflow-x: hidden;    /* because in the assingnement it's probidden to do horizontale scrollin  so to be more careful of this point */  
+}   
    
-    background-color: var(--hover-color);
-}
-
-.foot {
-    background-color: var(--nav-color);
-    color:var(--hover-color);
-}  /* separate the styling of the footer for the paragraph to be clearer */
-
-.foot p {
-    margin: 0;
-    color: var(--hover-color);
-}
- 
-
-.grid { 
-    display: grid; 
-    grid-template-columns: minmax(0, 35%) minmax(0, 65%); 
-    grid-template-areas: 
-        "header header" 
-        "sidebar main"
-        "game-info game-info"
-        "foot foot"; 
-    gap: 5px; 
-    padding: 5px; 
-    width: 100%;
-    box-sizing: border-box;
-} 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-.character {   
-    display: grid; 
-    grid-template-columns: minmax(0, 55%) minmax(0, 45%); 
-    gap: 20px; 
-    padding: 15px; 
-    background-color: var(--body-color); 
-    color:var(--text-color); 
-    min-width: 0;
-    box-sizing: border-box;
-} 
- 
-/* LEFT — Character */ 
- 
-.character-main { 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
-    min-width: 0;
-} 
- 
-#character-image { 
-    width: 100%; 
-    max-width: 350px; 
-    height: auto; 
-} 
-
-#linea-stats-image {
-    display: block;
-    width: 50%;
-    max-width: 420px;
-    height: auto;
-    margin: 15px auto;
-    justify-self: center;
-    grid-column: 1 / -1;
-}
- 
- 
- 
-.character-sidebar { 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    gap:10px; 
-    padding: 10px; 
-    min-width: 0;
-} 
-
-.character-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    min-width: 0;
-}
- 
-/* Name */ 
- 
-.character-name { 
-    font-size: 1rem; 
+/* creating the nav bar of the  webpage */   
+.header {   
+    grid-area: header;  
+    background-color: var(--nav-color);   
+    color: var(--body-color);   
+    padding: var(--space-6);   
+    min-width: 0;  /* It prevents long text or images to be wider than the the grid created in the screen */  
+    box-sizing: border-box; 
+}   
+   
+.navbar {   
+    display: flex;   
+    flex-direction: row;   
+    gap: var(--space-3);   
+    justify-content: space-between;  
+    align-items: center;  
+    min-width: 0;  
+    width: 100%;  
+}   
+   
+.navbar p { 
     margin: 0; 
-    overflow-wrap: break-word;
-} 
- 
-.character-role { 
+    min-width: 0; 
+    overflow-wrap: break-word; 
     font-size: 10px; 
 } 
  
-/* Description */ 
- 
-.character-description { 
-    font-size: 10px; 
-    line-height: 1.3; 
-    overflow-wrap: break-word;
+.navbar span {   
+    font-family: "Georgia", serif;   
+    font-weight: 800; /* to make the word Akatsu bold */   
+    font-size: 11px;  
+}   
+   
+.nav-links { 
+    min-width: 0; 
 } 
  
-/* Stats */ 
- 
-.character-stats { 
-    display: flex; 
-    flex-direction: column; 
-    gap: 0.3rem; 
-    width: 100%;
-} 
- 
-.stat { 
-    display: flex; 
-    flex-direction: column; 
-    padding: 0.3rem; 
-    border: 1px solid #c7c0aa; 
-    border-radius: 8px; 
-    font-size: 0.55rem; 
-    min-width: 0;
-} 
-
-.linea-profile {
-    grid-column: 1 / -1;  /* Because .character has two columns the -1 let the width take the 2 column and take in this case the full width of the screen not half*/
-    width: 100%;
-    max-width: none;
-    padding: 15px;
-    box-sizing: border-box; /* the total width stays exactly 100%, including padding and border without border box we could have a horizontal ooverflow*/
-    background-color: var(--body-color);
-    border: 2.5px dashed var(--nav-color);
-    color:var(--nav-color);
-    font-family: "Georgia",serif;
-}
-
-.linea-profile h2 {
-    margin: 0;
-    font-size: 15px;
-    letter-spacing: 2px;
-}
-
-.line {
-    width: 100%;
-    height: 1px;
-    margin: 8px 0 12px;
-    background-color: var(--text-color);
-}
-
-.stats p {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 8px;
-    margin: 7px 0;
-    font-size: 10px;
-}
-
-.stats span {
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-.stats strong {
-    font-weight: normal;
-    letter-spacing: -1px;
-}
-
-.quest {
-    margin-top: 15px;
-    padding-top: 10px;
-    border-top: 1px solid var(--text-color);
-}
-
-.quest h3 {
-    margin: 0 0 5px;
-    font-size: 15px;
-    letter-spacing: 2px;
-}
-
-.quest p {
-    margin: 0;
-    font-size: 10px;
-    line-height: 1.4;
-
-} 
-/* Button */ 
- 
-.character-button { 
-    display: block;
-    padding: 0.4rem; 
-    border: none; 
-    border-radius: 6px; 
-    background-color: var(--nav-color); 
-    color: white; 
-    font-size: 11px; 
-    font-family: "Georgia",serif;
-} 
- 
-
-
-
-
-
-
-
-
-/* ================= ABOUT ME PAGE ================= */
-
-/* styling the hero section */
-#hero {
-    border: 2px dashed var(--nav-color);
-    padding: 15px;
-    margin-bottom: 25px;
-    box-sizing: border-box;
-    text-align: center;
-}
-
-#hero h1 {
-    color: var(--nav-color);
-    font-family: "Georgia", serif;
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    margin: 0 0 10px;
-}
-
-#hero p {
-    margin: 0;
-}
-
-
-/* styling the About Me section */
-#about_Me {
-    text-align: center;
-}
-
-#about_Me h2,
-.about-boxes h2,
-.contact h2 {
-    font-family: "Georgia", serif;
-    color: var(--nav-color);
-    text-decoration: underline;
-    font-size: clamp(1.2rem, 3vw, 2rem);
-}
-
-#about_Me p {
-    line-height: 1.7;
-}
-
-
-/* styling my name */
-#about_Me .p1 {
-    font-family: "Georgia", serif;
-    font-weight: 800;
-    text-decoration: underline;
-    color: var(--nav-color);
-}
-
-
-/* styling my photo */
-#my-photo {
-    width: 100%;
-    max-width: 390px;
-    height: auto;
-    border: 4px groove var(--nav-color);
-    display: block;
-    margin: 20px auto;
-    box-sizing: border-box;
-}
-
-
-/* creating the two information boxes */
-.about-boxes {
+.nav-links nav {   
+    display: flex;   
+    flex-direction: row;   
+    gap: var(--space-4);  /* to put a space between character and about the creator */   
+    justify-content: center;   
+    align-items: center;  
+    flex-wrap: wrap;  
+}   
+   
+.navbar a,  
+.navbar a:visited {   
+    color: var(--hover-color);   
+    font-size: 9px;  
+    transition: color 180ms ease;  
+    overflow-wrap: break-word;  
+}  
+  
+.navbar .nav-links a:hover {  
+    color: var(--link-hover-color);  
+}   
+   
+   
+/* creating the sidebar with the map and intro to the game */   
+   
+#sidebar {   
+    display: flex;   
+    flex-direction: column;   
+    gap: var(--space-3);   
+    padding: var(--space-5);   
+    grid-area: sidebar;   
+    background-color: var(--sidebar-color);   
+    min-width: 0;  
+    width: 100%;  
+    box-sizing: border-box;  
+}   
+  
+#sidebar > p {  
+    font-family: "Georgia", serif;  
+    font-size: 10px;  
+    line-height: 1.4;  
+    text-align: center;  
+    margin: 0 0 var(--space-8);  
+    overflow-wrap: break-word;  
+}  
+  
+#sidebar h2 {   
+    font-family: "Georgia", serif;   
+    font-size: 10px;   
+    line-height: 1.2;   
+    overflow-wrap: break-word;  
+    text-align: center;  
+    margin: 0;  
+}   
+   
+.sidebar-title {     
+    text-align: center;  
+    margin-bottom: var(--space-8);  
+}  
+  
+.sidebar-title h2 {  
+    margin: 0 0 var(--space-2);  
+    font-size: 13px;  
+}  
+  
+.sidebar-title p {  
+    margin: 0;  
+    font-size: 9px;  
+    font-style: italic;  
+    line-height: 1.4;  
+    text-decoration-line: underline;  
+    overflow-wrap: break-word;  
+}  
+  
+#sidebar h3 {  
+    margin: 0 0 var(--space-3);  
+    font-size: 11px;  
+    letter-spacing: 0.5px;  
+    text-transform: uppercase;  
+    text-align: center;  
+    overflow-wrap: break-word;  
+}  
+  
+.sidebar-quote {  
+    color: var(--quote-color);  
+    font-style: italic;  
+    text-align: center;  
+    line-height: 1.4;  
+    text-decoration-line: underline;  
+    margin-top: var(--space-3);  
+    overflow-wrap: break-word;  
+}  
+  
+/* creating the  main design of the webpage */   
+  
+#main_info {  
+    grid-area: main;  
+    min-width: 0;  
+    width: 100%;  
+    box-sizing: border-box;  
+}  
+  
+.main {  
+    background: var(--body-color);  
+    padding: var(--space-6);  
+    min-width: 0;  
+    width: 100%;  
+    box-sizing: border-box;  
+}  
+  
+.main h1 {  
+    margin-top: 0;  
+    margin-bottom: var(--space-6);  
+    font-size: 18px;  
+    overflow-wrap: break-word;  
+}  
+  
+.main p {  
+    line-height: 1.5;  
+    font-size: 10px;  
+    margin: 0 0 var(--space-7);  
+    overflow-wrap: break-word;  
+}  
+  
+#map-fantasy {   
+    width: 70%;   
+    max-width: 300px;  /* so that the map stay the same size no matter what */   
+    height: auto;   
+    display: block;   
+    margin: 0 0 var(--space-7);  
+}   
+  
+#game {  
+    display: flex;  
+    flex-direction: row;  
+    grid-area: game-info;  
+    min-width: 0;  
+    width: 100%;  
+    justify-content: space-between; 
+}  
+  
+.game-info {  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    flex-direction: column;  
+    gap: var(--space-3);  
+    width: 49%;  /* because the background of the web page won't be the full size so we ajust this so that it take the whole space no matter what type of device we use */  
+    /* 0i created 2 box with the same backgound and type so it merge together and we can't telle them apart but if i put the border around them it will show the 2 box seperately */  
+    box-sizing: border-box;  
+    padding: var(--space-5);  
+    background-color: var(--hover-color);  
+    min-width: 0;  
+}  
+  
+.game-info p {  
+    margin: 0;  
+    line-height: 1.4;  
+    font-size: 9px; 
+    overflow-wrap: break-word;  
+}  
+  
+.game-info ul {  
+    margin: 0;  
+    padding-left: 15px;  
+    line-height: 1.4;  
+    width: 100%;  
+    box-sizing: border-box; 
+    font-size: 9px; 
+}  
+  
+.foot {  
+    background-color: var(--nav-color);  
+    color: var(--hover-color);  
+}  /* separate the styling of the footer for the paragraph to be clearer */  
+  
+.foot p {  
+    margin: 0;  
+    padding: var(--space-5);  
+    color: var(--hover-color);  
+    font-size: 9px;  
+    text-align: center;  
+    overflow-wrap: break-word;  
+}  
+   
+  
+.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
-    gap: 20px;
-    margin-top: 30px;
-    min-width: 0;
-}
-
-
-/* styling each box */
-.box {
-    min-width: 0;
-    max-width: 100%;
-    padding: 15px;
-    border: 2px dashed var(--nav-color);
-    box-sizing: border-box;
-    text-align: center;
-}
-
-.box p {
-    line-height: 1.6;
-}
-
-.box ul {
-    width: min(100%, fit-content);
-    max-width: 100%;
-    margin: 10px auto;
-    padding-left: 25px;
-    text-align: left;
-    line-height: 1.7;
-}
-
-
-/* creating the contact section */
-.contact {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.Form {
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "header"
+        "sidebar"
+        "main"
+        "game-info"
+        "foot";
+    gap: var(--space-1);
+    padding: var(--space-1);
     width: 100%;
-    max-width: 600px;
-    text-align: center;
-}
-
-.Form form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-
-.Form label {
-    font-family: "Georgia", serif;
-    color: var(--nav-color);
-}
-
-#name,#email,#message {
-    width: 100%;
-    max-width: 500px;
+    flex: 1;
+    min-width: 0;
     box-sizing: border-box;
-    padding: 8px;
-    font-family: Arial, sans-serif;
-    font-size: 1rem;
-    border: 2px solid var(--nav-color);
-    background-color: #ffffff;
+} 
+   
+.character {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "character-info"
+        "main-image"
+        "linea-stats"
+        "linea-profile";
+    gap: var(--space-7);
+    padding: var(--space-6);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+} 
+   
+/* LEFT — Character */   
+   
+.character-main {   
+    display: flex;   
+    flex-direction: column;   
+    justify-content: center;   
+    align-items: center;   
+    min-width: 0;  
+}   
+   
+#character-image {   
+    width: 80%;   
+    max-width: 350px;   
+    height: auto;  
+    display: block;  
+    margin: 0 auto;  
+    grid-area: main-image;  
+}   
+  
+#linea-stats-image {  
+    display: block;  
+    width: 80%;  
+    max-width: 420px;  
+    height: auto;  
+    margin: var(--space-3) auto;  
+    justify-self: center;  
+    grid-area: linea-stats;  
+}  
+   
+.character-sidebar {   
+    display: flex;   
+    flex-direction: column;   
+    justify-content: center;   
+    gap: var(--space-7);   
+    padding: var(--space-7);   
+    min-width: 0;  
+}   
+  
+.character-info {  
+    display: flex;  
+    flex-direction: column;  
+    align-items: flex-start;  
+    justify-content: center; 
+    min-width: 0;  
+    width: 100%;  
+    grid-area: character-info;  
+}  
+   
+/* Name */   
+   
+.character-name {   
+    font-size: 18px;   
+    margin: 0;   
+    overflow-wrap: break-word;  
+}   
+   
+.character-role {   
+    font-size: 9px;   
+    overflow-wrap: break-word;  
+}   
+   
+/* Description  of the character how do in want the description to look like*/   
+   
+.character-description {   
+    font-size: 9px;   
+    line-height: 1.3;   
+    overflow-wrap: break-word;  
+}   
+   
+/* box for the styling of the statistique of my character*/   
+   
+.character-stats {   
+    display: flex;   
+    flex-direction: column;   
+    gap: var(--space-1);   
+    width: 100%;  
+    grid-area: character-stats;  
+}   
+   
+.character-stats h2 { 
+    font-size: 12px; 
+    margin: 0 0 var(--space-1); 
+} 
+ 
+.stat {   
+    display: flex;   
+    flex-direction: column;   
+    padding: var(--space-2);   
+    border: 1px solid var(--border-color);   
+    border-radius: 6px;   
+    font-size: 8px;   
+    min-width: 0;  
+    width: 100%;  
+    box-sizing: border-box; 
+}  
+  
+.linea-profile {  
+    grid-column: 1 / -1;  /* Because .character has two columns the -1 let the width take the 2 column and take in this case the full width of the screen not half*/  
+    width: 100%;  
+    max-width: 100%;  
+    padding: var(--space-6);  
+    box-sizing: border-box; /* the total width stays exactly 100%, including padding and border without border box we could have a horizontal ooverflow*/  
+    background-color: var(--body-color);  
+    border: 2px dashed var(--nav-color);  
+    color: var(--nav-color);  
+    font-family: "Georgia", serif;  
+    min-width: 0;  
+    grid-area: linea-profile;  
+}  
+  
+.linea-profile h2 {  
+    margin: 0;  
+    font-size: 13px;  
+    letter-spacing: 1px;  
+    overflow-wrap: break-word;  
+}  
+  
+.line {  
+    width: 100%;  
+    height: 1px;  
+    margin: var(--space-3) 0 var(--space-5);  
+    background-color: var(--text-color);  
+}  
+  
+.stats p {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    gap: var(--space-2);  
+    margin: var(--space-2) 0;  
+    font-size: 7px;  
+    min-width: 0;  
+}  
+  
+.stats span {    /* span is used for inline styling*/
+    font-weight: bold;  
+    letter-spacing: 0.5px;  
+}  
+  
+.stats strong {    
+    font-weight: normal;  
+    letter-spacing: -1px;  
+    font-size: 7px; 
+    white-space: nowrap;  
+}  
+  
+.quest {  
+    margin-top: var(--space-6);  
+    padding-top: var(--space-4);  
+    border-top: 1px solid var(--text-color);  
+}  
+  
+.quest h3 {  
+    margin: 0 0 var(--space-1);  
+    font-size: 11px;  
+    letter-spacing: 1px;  
+}  
+  
+.quest p {  
+    margin: 0;  
+    font-size: 8px;  
+    line-height: 1.4;  
+    overflow-wrap: break-word;  
+}   
+  
+/* Button */   
+   
+.character-button {   
+    display: block;  
+    align-self: center;
+    padding: var(--space-4) var(--space-8);   
+    border: none;   
+    border-radius: 5px;   
+    background-color: var(--nav-color);   
+    color: var(--white-color);   
+    font-size: 10px;   
+    font-family: "Georgia", serif;  
+    cursor: pointer;  
 }
-
-#message {   /* since we want to write a message so it will logicaly be bigger than an email or a name so we add those to commad to make the message box bigger , better for the aesthetic */
-    min-height: 120px;
-    resize: vertical;
-}
-
-#submit {
-    border: 2px solid var(--nav-color);
-    border-radius: 8px;
-    padding: 8px 18px;
-    font-size: 1rem;
-    font-family: "Georgia", serif;
-    background-color: var(--nav-color);
-    color: var(--hover-color);
-    cursor: pointer;
-}
-
-#submit:hover {
-    background-color: #79a593;
-}
-
-
-/* styling the social links */
-.mylinks {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-}
-
-.social-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#logo_1,
-#logo_2,
-#logo_3 {
-    width: 70px;
-    height: 70px;
-    object-fit: contain;
-}
-
-.foot {
-    grid-area: foot;
-}
-
-
-
-
-
-
-
-
-
-
-@media (min-width: 768px) {  /* because we decide to do mobile first so we have now to ajust for the desktop/ laptop */ 
- 
-    .navbar { 
-        flex-direction: row; 
-        gap: 40px; 
+/* ================= ABOUT ME PAGE ================= */  
+  
+/* styling the hero section */  
+  
+#hero {  
+    border: 2px dashed var(--nav-color);  
+    padding: var(--space-7);  
+    margin-bottom: var(--space-9);  
+    box-sizing: border-box;  
+    text-align: center;  
+    min-width: 0;  
+}  
+  
+#hero h1 {  
+    color: var(--nav-color);  
+    font-family: "Georgia", serif;  
+    font-size: 20px;  
+    margin: 0 0 var(--space-4);  
+    overflow-wrap: break-word;  
+}  
+  
+#hero p {  
+    margin: 0;  
+    font-size: 10px; 
+    overflow-wrap: break-word;  
+}  
+  
+/* styling the About Me section */  
+  
+#about_Me {  
+    text-align: center;  
+    min-width: 0;  
+}  
+  
+#about_Me h2, .about-boxes h2, .contact h2 {  
+    font-family: "Georgia", serif;  
+    color: var(--nav-color);  
+    text-decoration: underline;  
+    font-size: 16px;  
+    overflow-wrap: break-word;  
+}  
+  
+#about_Me p {  
+    line-height: 1.5;  
+    font-size: 10px; 
+    overflow-wrap: break-word;  
+}  
+  
+/* styling my name */  
+  
+#about_Me .p1 {  
+    font-family: "Georgia", serif;  
+    font-weight: 800;  
+    text-decoration: underline;  
+    color: var(--nav-color);  
+}  
+  
+/* styling my photo */  
+  
+#my-photo {  
+    width: 70%;  
+    max-width: 390px;  
+    height: auto;  
+    border: 3px groove var(--nav-color);  
+    display: block;  
+    margin: var(--space-7) auto;  
+    box-sizing: border-box;  
+}  
+  
+/* creating the two information boxes */  
+  
+.about-boxes {  
+    display: grid;  
+    grid-template-columns: 100%;  
+    gap: var(--space-7);  
+    margin-top: var(--space-9);  
+    min-width: 0;  
+}  
+  
+/* styling each box */  
+  
+.box {  
+    min-width: 0;  
+    max-width: 100%;  
+    width: 100%;  
+    padding: var(--space-6);  
+    border: 2px dashed var(--nav-color);  
+    box-sizing: border-box;  
+    text-align: center;  
+}  
+  
+.box p {  
+    line-height: 1.5;  
+    font-size: 10px; 
+    overflow-wrap: break-word;  
+}  
+  
+.box ul {  
+    width: 100%;  
+    max-width: 100%;  
+    margin: var(--space-3) auto;  
+    padding-left: 20px;  
+    text-align: left;  
+    line-height: 1.5;  
+    font-size: 10px; 
+    box-sizing: border-box; 
+}  
+  
+/* creating the contact section */  
+  
+.contact {  
+    display: flex;  
+    justify-content: center;  
+    width: 100%;  
+    margin-top: var(--space-9);  
+    min-width: 0;  
+}  
+  
+.Form {  
+    width: 100%;  
+    max-width: 600px;  
+    text-align: center;  
+    min-width: 0;  
+}  
+  
+.Form form {  
+    display: flex;  
+    flex-direction: column;  
+    align-items: center;  
+    gap: var(--space-3);  
+}  
+  
+.Form label {  
+    font-family: "Georgia", serif;  
+    color: var(--nav-color);  
+    font-size: 10px; 
+}  
+  
+#name, #email,#message {  
+    width: 100%;  
+    max-width: 500px;  
+    box-sizing: border-box;  
+    padding: var(--space-4);  
+    font-family: "Arial", sans-serif;  
+    font-size: 12px;  
+    border: 2px solid var(--nav-color);  
+    background-color: var(--white-color);  
+}  
+  
+#message {   /* since we want to write a message so it will logicaly be bigger than an email or a name so we add those to commad to make the message box bigger , better for the aesthetic */  
+    min-height: 80px;  
+    resize: vertical;  
+}  
+  
+#submit {  
+    border: 2px solid var(--nav-color);  
+    border-radius: 6px;  
+    padding: var(--space-4) var(--space-8);  
+    font-size: 12px;  
+    font-family: "Georgia", serif;  
+    background-color: var(--nav-color);  
+    color: var(--hover-color);  
+    cursor: pointer;  
+}  
+  
+#submit:hover {  
+    background-color: var(--sidebar-color);  
+}  
+  
+/* styling the social links */  
+  
+.mylinks {  
+    display: flex;  
+    justify-content: center;  
+    gap: var(--space-9);  
+    margin-top: var(--space-9);  
+    flex-wrap: wrap;  
+}  
+  
+.social-link {  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+}  
+  
+#logo_1,#logo_2,#logo_3 {  
+    width: 45px;  
+    height: 45px;  
+    object-fit: contain;  
+}  
+  
+.foot {  
+    grid-area: foot;  
+}  
+  
+/* == MEDIA QUERY : DESKTOP / LARGE SCREENS == */  
+  
+@media (min-width: 768px) {  /* because we decide to do mobile first so we have now to ajust for the desktop/ laptop */   
+   
+    .header { 
+        padding: var(--space-7); 
     } 
  
-    .navbar span {
-        font-size: 1rem;
-    }
-
-    .nav-links nav { 
-        flex-direction: row; 
-        gap: 30px; 
+    .navbar {   
+        flex-direction: row;   
+        gap: var(--space-14);   
+        align-items: center;  
+    }   
+   
+    .navbar p { 
+        font-size: 16px; 
     } 
  
-    .navbar a, .navbar a:hover , .navbar a:visited {
-        font-size: 1rem;
-    }
-
-    .grid { 
-        grid-template-columns: 250px minmax(0, 1fr);   /* the minmax is to allow the 2 colums created to always shrink */
-        grid-template-areas: 
-            "header header" 
-            "sidebar main"
-            "game-info game-info"
-            "foot foot"; 
-    } 
-
-    
- 
-    .character { 
-        grid-template-columns: minmax(0, 350px) minmax(0, 1fr); 
-        grid-template-areas:
-            "main-image character-info"
-            "main-image linea-stats"
-            "linea-profile linea-profile";
-        gap: clamp(1rem, 3vw, 2rem); 
-        align-items: start;
-        padding: clamp(1rem, 4vw, 3rem); 
-    } 
-
-    #character-image {
-        grid-area: main-image;
-        justify-self: center;
-    }
-
-    #linea-stats-image {
-        grid-area: linea-stats;
-        justify-self: start;
-        margin: 45px;
-        width:80%;
-    }
-
-    .character-info {
-        grid-area: character-info;
-        min-width: 0;
-    }
-
-    .linea-profile {
-        grid-area: linea-profile;
-    }
- 
-    .character-name { 
-        font-size: 3rem; 
-     
+    .navbar span {  
+        font-size: 16px;  
+    }  
+  
+    .nav-links nav {   
+        flex-direction: row;   
+        gap: var(--space-13);   
+    }   
+   
+    .navbar a,  
+    .navbar a:hover,  
+    .navbar a:visited {  
+        font-size: 16px;  
+    }  
+  
+    .grid {   
+        grid-template-columns: 250px calc(100% - 255px);     
+        grid-template-areas:   
+            "header header"   
+            "sidebar main"  
+            "game-info game-info"  
+            "foot foot";   
+    }   
+  
+    #sidebar {   
+        gap: var(--space-6);   
+        padding: var(--space-7);   
     } 
  
-    .character-role { 
-        font-size: 1rem; 
+    #sidebar > p {  
+        font-size: 16px;  
+        margin: 0 0 var(--space-12);  
+    }  
+ 
+    #sidebar h2 {   
+        font-size: 12px;   
+    }   
+ 
+    .sidebar-title {     
+        margin-bottom: var(--space-13);  
+    }  
+  
+    .sidebar-title h2 {  
+        margin: 0 0 var(--space-6);  
+        font-size: 20px;  
+    }  
+  
+    .sidebar-title p {  
+        font-size: 14px;  
+    }  
+  
+    #sidebar h3 {  
+        margin: 0 0 var(--space-8);  
+        font-size: 18px;  
+    }  
+  
+    .main {  
+        padding: var(--space-7);  
+    }  
+  
+    .main h1 {  
+        margin-bottom: var(--space-8);  
+        font-size: 24px;  
+    }  
+  
+    .main p {  
+        line-height: 1.7;  
+        font-size: 16px;  
+        margin: 0 0 var(--space-11);  
+    }  
+  
+    #map-fantasy {   
+        width: 100%;   
+        max-width: 300px;   
+        margin: 0 0 var(--space-11);  
+    }  
+ 
+    #game {  
+        flex-direction: row;  
+    }  
+  
+    .game-info {  
+        flex-direction: row;  
+        gap: var(--space-11);  
+        width: 49%;  
+        padding: var(--space-7); 
+    }  
+  
+    .game-info p { 
+        font-size: 16px; 
     } 
  
-    .character-description { 
-        font-size: 1rem; 
+    .game-info ul {  
+        width: 50%;  
+        font-size: 16px; 
+    }  
+  
+    .character {   
+        grid-template-columns: 350px calc(100% - 370px);   
+        grid-template-areas:  
+            "main-image character-info"  
+            "main-image linea-stats"  
+            "linea-profile linea-profile";  
+        gap: var(--space-11);   
+        align-items: start;  
+        padding: var(--space-13);   
+    }   
+  
+    #character-image {  
+        grid-area: main-image;  
+        justify-self: center;  
+    }  
+  
+    #linea-stats-image {  
+        grid-area: linea-stats;  
+        justify-self: start;  
+        margin: var(--space-15);   
+        width: 80%;  
+        max-width: 420px;  
+    }  
+  
+    .character-info {  
+        grid-area: character-info;  
+        min-width: 0;  
+    }  
+  
+    .linea-profile {  
+        grid-area: linea-profile;  
+    }  
+   
+    .character-name {   
+        font-size: 48px;  
+    }   
+   
+    .character-role {   
+        font-size: 16px;   
+    }   
+   
+    .character-description {   
+        font-size: 16px;   
+    }   
+   
+    .character-stats {   
+        display: grid;  
+        grid-template-columns: 30% 30% 30%;  
+        justify-content: space-between; 
+        gap: 0;  
+    }   
+  
+    .character-stats h2 {  
+        grid-column: 1 / -1;  
+    }  
+   
+    .stat {   
+        font-size: 14px;   
+    }  
+  
+    .linea-profile {  
+        padding: var(--space-11);  
+    }  
+  
+    .linea-profile h2 {  
+        font-size: 24px;  
+        letter-spacing: 3px;  
+    }  
+  
+    .line {  
+        margin: var(--space-6) 0 var(--space-9);  
+    }  
+  
+    .stats p {  
+        margin: var(--space-6) 0;  
+        font-size: 13px;  
+    }  
+  
+    .stats strong {  
+        font-size: 13px; 
     } 
  
-    .character-stats { 
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 20px;
-    } 
+    .quest {  
+        margin-top: var(--space-10);  
+        padding-top: var(--space-8);  
+    }  
+  
+    .quest h3 {  
+        margin-bottom: var(--space-4);  
+        font-size: 14px;  
+    }  
+  
+    .quest p {  
+        font-size: 13px;  
+    }  
 
-    .character-stats h2 {
-        grid-column: 1 / -1;
+    .character-button {
+        padding: var(--space-6) var(--space-9);
+        font-size: 16px;
     }
+  
+    .about-boxes {  
+        grid-template-columns: 48% 48%;  
+        justify-content: space-between; 
+        gap: 0;  
+    }  
+  
+    #hero h1 {  
+        font-size: 40px;  
+    }  
+  
+    #about_Me h2,  
+    .about-boxes h2,  
+    .contact h2 {  
+        font-size: 28px;  
+    }  
  
-    .stat { 
-        font-size: 0.9rem; 
+    #my-photo { 
+        width: 100%; 
     } 
-
-    .linea-profile {
-        padding: 20px;
-    }
-
-    .linea-profile h2 {
-        font-size: 1.5rem;
-        letter-spacing: 3px;
-    }
-
-    .line {
-        margin: 8px 0 15px;
-    }
-
-    .stats p {
-        margin: 8px 0;
-        font-size: 0.8rem;
-    }
-
-    .quest {
-        margin-top: 18px;
-        padding-top: 12px;
-    }
-
-    .quest h3 {
-        margin-bottom: 6px;
-        font-size: 0.85rem;
-    }
-
-    .quest p {
-        font-size: 0.8rem;
-    }
+ 
+    .box { 
+        padding: var(--space-9); 
+    } 
+ 
+    .box p, 
+    .box ul { 
+        font-size: 16px; 
+    } 
+ 
+    .Form label { 
+        font-size: 16px; 
+    } 
+ 
+    #name,#email,#message { 
+        font-size: 16px; 
+        padding: var(--space-6); 
+    } 
+ 
+    #message { 
+        min-height: 120px; 
+    } 
+ 
+    #submit { 
+        padding: var(--space-6) var(--space-10); 
+        font-size: 16px; 
+    } 
+ 
+    #logo_1,#logo_2,#logo_3 { 
+        width: 70px; 
+        height: 70px; 
+    } 
 }
