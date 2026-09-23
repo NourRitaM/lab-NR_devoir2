@@ -318,19 +318,118 @@ body {
     overflow-wrap: break-word; 
 } 
    
-.foot {   
-    background-color: var(--nav-color);   
-    color: var(--hover-color);   
-}  /* separate the styling of the footer for the paragraph to be clearer */   
-   
-.foot p {   
-    margin: 0;   
-    padding: var(--space-5);   
-    color: var(--hover-color);   
-    font-size: 0.875rem;   
-    text-align: center;   
-    overflow-wrap: break-word;   
-}   
+.foot {
+    grid-area: foot;
+    background-color: var(--nav-color);
+    color: var(--hover-color);
+    padding: var(--space-12) var(--space-7) var(--space-6);
+    min-width: 0;
+}
+
+.foot-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.foot-intro,
+.foot-column {
+    min-width: 0;
+}
+
+.foot-kicker,
+.foot-column h3 {
+    margin: 0 0 var(--space-4);
+    color: var(--link-hover-color);
+    font-size: 0.625rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.foot-intro h2 {
+    margin: 0 0 var(--space-4);
+    color: var(--white-color);
+    font-size: 1.25rem;
+    overflow-wrap: break-word;
+}
+
+.foot-intro > p:last-child,
+.foot-column p {
+    margin: 0;
+    color: var(--hover-color);
+    font-size: 0.75rem;
+    line-height: 1.5;
+    overflow-wrap: break-word;
+}
+
+.foot-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+}
+
+.foot-column a {
+    color: var(--hover-color);
+    font-size: 0.75rem;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+    transition: color 180ms ease;
+}
+
+.foot-column a:hover {
+    color: var(--link-hover-color);
+}
+
+.foot-column strong {
+    color: var(--white-color);
+    font-size: 0.75rem;
+    line-height: 1.35;
+    overflow-wrap: break-word;
+}
+
+.foot-status {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-top: var(--space-2) !important;
+    color: var(--link-hover-color) !important;
+    font-size: 0.6875rem !important;
+}
+
+.foot-status span {
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background-color: var(--link-hover-color);
+    box-shadow: 0 0 0 3px rgba(225, 192, 132, 0.16);
+}
+
+.foot-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--space-6);
+    max-width: 1100px;
+    margin: var(--space-12) auto 0;
+    padding-top: var(--space-6);
+    border-top: 1px solid rgba(250, 243, 221, 0.25);
+}
+
+.foot-bottom p {
+    margin: 0;
+    color: var(--hover-color);
+    font-size: 0.625rem;
+    line-height: 1.4;
+    overflow-wrap: break-word;
+}
+
+.foot-bottom span {
+    margin: 0 var(--space-3);
+    color: var(--link-hover-color);
+}
     
 /* since we decide to do the webpage mobile first so in order to fit everything on a smaller screen we put grid and use template-area to make everything look better as a grid of 1 column and multilple row for a mobile or 2 column and multiple row for a larger screen */ 
 .grid { 
@@ -839,6 +938,14 @@ body > .grid {
 /* == MEDIA QUERY : DESKTOP / LARGE SCREENS == */   
    
 @media (min-width: 768px) {  /* because we decide to do mobile first so we have now to ajust for the desktop/ laptop */    
+    .foot-main {
+        grid-template-columns: minmax(0, 1.6fr) repeat(3, minmax(0, 1fr));
+    }
+
+    .foot-bottom {
+        flex-direction: row;
+        align-items: center;
+    }
     
     .header {  
         padding: var(--space-7);  
