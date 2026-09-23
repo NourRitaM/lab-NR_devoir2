@@ -1,3 +1,4 @@
+/* creating the variable */
 :root {   /* creating variable for latter use instead of writing each time the color or the font we use variable to set them */ 
     --nav-color: #304f45; /* we use the backgound of the head in 3 other html file so creating a varable is better to not loose / forget the color */     
     --hover-color: #faf3dd;    
@@ -25,6 +26,7 @@
     --space-15: 2.8125rem; 
 }    
  
+/* make the body the same for all the page*/
 body {    
     /* == spacing scale: the spacing variables are inherited by the whole page == */ 
   
@@ -47,6 +49,7 @@ body {
     min-width: 0;  /* It prevents long text or images to be wider than the the grid created in the screen */   
     box-sizing: border-box;  
 }    
+
  
 /* creating the nav bar of the webpage */      
 .navbar {    
@@ -207,6 +210,7 @@ body {
     overflow-wrap: break-word;   
 }   
    
+/* for the image of the index2.html page */
 #map-fantasy {    
     width: 70%;    
     max-width: 300px;  /* so that the map stay the same size no matter what */    
@@ -214,7 +218,7 @@ body {
     display: block;    
     margin: 0 auto var(--space-7);  
 }    
-   
+/* for the boxes element in index2 */ 
 #game {   
     display: flex;   
     flex-direction: row;   
@@ -317,7 +321,8 @@ body {
     line-height: 1.5; 
     overflow-wrap: break-word; 
 } 
-   
+  
+/* design for thee footer to be a true game webpage footer */
 .foot {
     grid-area: foot;
     background-color: var(--nav-color);
@@ -498,7 +503,7 @@ body > .grid {
     min-width: 0;
 }
  
-/* LEFT — Character */    
+/* Left image — Character */    
     
 .character-main {    
     display: flex;    
@@ -548,7 +553,7 @@ body > .grid {
     grid-area: character-info;   
 }   
     
-/* Name */    
+/* design for the name and the role of the character beside the image */    
     
 .character-name {    
     font-size: 1.125rem;    
@@ -609,6 +614,7 @@ body > .grid {
     min-width: 0;   
     grid-area: linea-profile;   
 }   
+/* for the styling of the statistique of linea / my character */
    
 .linea-profile h2 {   
     margin: 0;   
@@ -694,7 +700,7 @@ body > .grid {
     width: 100%;
 }
 
-/* Each card contains additional information about the character */
+/* Each card contains additional info about the character , styling those card to look more aesthetic*/
 .side-card {
     background-color: var(--sidebar-color);
     padding: var(--space-6);
@@ -706,7 +712,7 @@ body > .grid {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Small movement when hovering over a card */
+/* create small movement when the curser is on top of the boxes to look more interactive*/
 .side-card:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 14px rgba(38, 53, 47, 0.12);
@@ -725,7 +731,7 @@ body > .grid {
     overflow-wrap: break-word;
 }
 
-/* Keeping the paragraph readable and preventing long text from overflowing */
+/* Keep the paragraph readable and preventing long text from overflowing */
 .side-card p {
     margin: 0 0 var(--space-4);
     font-size: 0.875rem;
@@ -733,7 +739,7 @@ body > .grid {
     overflow-wrap: break-word;
 }
 
-/* The list gives extra details about the character inside each card */
+/* The list gives extra details about the character  */
 .side-card ul {
     margin: 0;
     padding-left: 1.2rem;
@@ -809,7 +815,7 @@ body > .grid {
     box-sizing: border-box;   
 }   
    
-/* creating the two information boxes */   
+/* creating the two info boxes */   
    
 .about-boxes {   
     display: grid;   
@@ -1142,7 +1148,7 @@ body > .grid {
         width: 100%;
     }
 
-    /* Desktop card styling: a little more spacing makes the information easier to read */ 
+    /*  more spacing to make the information easier to read */ 
     .side-card {
         padding: var(--space-7);
         background-color: var(--sidebar-color);
